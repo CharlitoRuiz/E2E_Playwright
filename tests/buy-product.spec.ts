@@ -11,7 +11,7 @@ test.beforeEach('Login', async ({ page }) => {
 })
 
 // buy a bike lights
-test('buy a bike lights correctly', async({page})=>{
+test('buy a bike lights correctly', {tag:"@smoke"},async({page})=>{
   const loginpage = new  loginPage(page);
   
   await loginpage.addToCart();

@@ -9,14 +9,14 @@ test.beforeEach('Enter to Sauce  Labs', async ({ page }) => {
   await expect(page).toHaveTitle(/Swag Labs/);
 })
 
-test('locked user', {tag: "@lockedUser"}, async({page})=>{
+test('locked user', {tag: "@functional"}, async({page})=>{
   const loginpage = new loginPage(page);
   await loginpage.enterLogin("locked_out_user", "secret_sauce")
   await expect(loginpage.txtErrorLogin).toBeVisible();
   await expect(loginpage.txtErrorLogin).toContainText('Epic sadface: Sorry, this user has been locked out.');
 })
 
-test('bad password', {tag: "@badPassword"},async({page})=>{
+test('bad password', {tag: "@functional"},async({page})=>{
   const loginpage = new loginPage(page);
   await loginpage.enterLogin("locked_out_user", "secret_sauce1")
   await expect(loginpage.txtErrorLogin).toBeVisible();
