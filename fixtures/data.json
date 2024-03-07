@@ -1,0 +1,17 @@
+{
+  "login":{
+    "user": "standard_user",
+    "pass": "secret_sauce"
+  },
+  "locked_login":{
+    "user": "locked_out_user"
+  },
+  "invalid_login":{
+    "pass": "secret_sauce1"
+  },
+  "checkout":{
+    "name": "Carlos",
+    "lastName":"Test",
+    "zip": "10001"
+  }
+}
